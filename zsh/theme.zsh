@@ -1,1 +1,3 @@
-prompt skwp
+autoload -Uz promptinit
+promptinit
+prompt steeef
