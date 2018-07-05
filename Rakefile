@@ -10,8 +10,6 @@ task :install => [:submodule_init, :submodules] do
   puts "======================================================"
   puts
 
-  # install_homebrew if RUBY_PLATFORM.downcase.include?("darwin")
-  # setup_python
   install_rvm_binstubs
 
   # this has all the runcoms from this directory.
@@ -152,33 +150,33 @@ def install_rvm_binstubs
   puts
 end
 
-# def install_homebrew
-#   run %{which brew}
-#   unless $?.success?
-#     puts "======================================================"
-#     puts "Installing Homebrew, the OSX package manager...If it's"
-#     puts "already installed, this will do nothing."
-#     puts "======================================================"
-#     homebrew_curl = "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#     run %{ruby -e "#{homebrew_curl}"}
-#   end
+def install_homebrew
+  run %{which brew}
+  unless $?.success?
+    puts "======================================================"
+    puts "Installing Homebrew, the OSX package manager...If it's"
+    puts "already installed, this will do nothing."
+    puts "======================================================"
+    homebrew_curl = "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    run %{ruby -e "#{homebrew_curl}"}
+  end
 
-#   puts
-#   puts
-#   puts "======================================================"
-#   puts "Updating Homebrew."
-#   puts "======================================================"
-#   run %{ brew update }
-#   puts
-#   puts
-#   puts "======================================================"
-#   puts "Installing Homebrew packages...There may be some warnings."
-#   puts "======================================================"
-#   run %{ brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi}
-#   run %{ brew install macvim --custom-icons --with-override-system-vim --with-lua --with-luajit }
-#   puts
-#   puts
-# end
+  puts
+  puts
+  puts "======================================================"
+  puts "Updating Homebrew."
+  puts "======================================================"
+  run %{ brew update }
+  puts
+  puts
+  puts "======================================================"
+  puts "Installing Homebrew packages...There may be some warnings."
+  puts "======================================================"
+  run %{ brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi}
+  run %{ brew install macvim --custom-icons --with-override-system-vim --with-lua --with-luajit }
+  puts
+  puts
+end
 
 def install_fonts
   puts "======================================================"
@@ -380,6 +378,7 @@ def put_status(message)
   puts "======================================================"
   puts "#{message}"
   puts "======================================================"
+end
 
 def success_msg(action)
   puts ""
