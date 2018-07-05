@@ -10,7 +10,8 @@ task :install => [:submodule_init, :submodules] do
   puts "======================================================"
   puts
 
-  install_homebrew if RUBY_PLATFORM.downcase.include?("darwin")
+  # install_homebrew if RUBY_PLATFORM.downcase.include?("darwin")
+  # setup_python
   install_rvm_binstubs
 
   # this has all the runcoms from this directory.
@@ -151,32 +152,33 @@ def install_rvm_binstubs
   puts
 end
 
-def install_homebrew
-  run %{which brew}
-  unless $?.success?
-    puts "======================================================"
-    puts "Installing Homebrew, the OSX package manager...If it's"
-    puts "already installed, this will do nothing."
-    puts "======================================================"
-    run %{ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"}
-  end
+# def install_homebrew
+#   run %{which brew}
+#   unless $?.success?
+#     puts "======================================================"
+#     puts "Installing Homebrew, the OSX package manager...If it's"
+#     puts "already installed, this will do nothing."
+#     puts "======================================================"
+#     homebrew_curl = "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#     run %{ruby -e "#{homebrew_curl}"}
+#   end
 
-  puts
-  puts
-  puts "======================================================"
-  puts "Updating Homebrew."
-  puts "======================================================"
-  run %{brew update}
-  puts
-  puts
-  puts "======================================================"
-  puts "Installing Homebrew packages...There may be some warnings."
-  puts "======================================================"
-  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi}
-  run %{brew install macvim --custom-icons --with-override-system-vim --with-lua --with-luajit}
-  puts
-  puts
-end
+#   puts
+#   puts
+#   puts "======================================================"
+#   puts "Updating Homebrew."
+#   puts "======================================================"
+#   run %{ brew update }
+#   puts
+#   puts
+#   puts "======================================================"
+#   puts "Installing Homebrew packages...There may be some warnings."
+#   puts "======================================================"
+#   run %{ brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi}
+#   run %{ brew install macvim --custom-icons --with-override-system-vim --with-lua --with-luajit }
+#   puts
+#   puts
+# end
 
 def install_fonts
   puts "======================================================"
@@ -256,8 +258,7 @@ def ask(message, values)
 end
 
 def install_prezto
-  puts
-  puts "Installing Prezto (ZSH Enhancements)..."
+  put_status("Installing Prezto (ZSH Enhancements)...")
 
   run %{ ln -nfs "$HOME/.yadr/zsh/prezto" "${ZDOTDIR:-$HOME}/.zprezto" }
 
@@ -356,6 +357,29 @@ def apply_theme_to_iterm_profile_idx(index, color_scheme_path)
   run %{ /usr/libexec/PlistBuddy -c "Merge '#{color_scheme_path}' :'New Bookmarks':#{index}" ~/Library/Preferences/com.googlecode.iterm2.plist }
   run %{ defaults read com.googlecode.iterm2 }
 end
+
+def setup_python
+  put_status("Installing and setting up Python...")
+  run %{ brew install python pyenv }
+  python_3_regex = "3\.\d+\.\d+"
+  latest_python_3 = run %{ $(brew info python3 | egrep -o #{python_3_regex} | head -1) }
+  run %{ pyenv install -s #{latest_python_3} }
+  run %{ pyenv global #{latest_python_3} }
+  run %{ pyenv rehash }
+
+  # Install pipsi
+  run %{ curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python }
+  run %{ pipsi install black }
+  run %{ pipsi install pipenv }
+  run %{ pipsi install awscli }
+  run %{ pipsi install pylint }
+  put_status("Finished installing and setting up Python...")
+end
+
+def put_status(message)
+  puts "======================================================"
+  puts "#{message}"
+  puts "======================================================"
 
 def success_msg(action)
   puts ""
