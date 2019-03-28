@@ -40,7 +40,10 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'ssh' \
-  'prompt'
+  'prompt' 
+
+zstyle ':prezto:load' pmodule-dirs \
+  '$HOME/.zprezto/modules'
 
 #
 # Editor
