@@ -110,7 +110,7 @@
   default = upstream
 [core]
   autocrlf = false
-  editor = vim
+	editor = code --wait
   excludesfile = ~/.yadr/git/gitignore
 [advice]
   statusHints = false
@@ -133,3 +133,6 @@
 [http]
 [http]
 [http]
+[user]
+	name = Joel Castillo
+	email = jocastillo@records.nyc.gov
