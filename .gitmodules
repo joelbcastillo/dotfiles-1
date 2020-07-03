@@ -1,9 +1,6 @@
-[submodule "dotbot"]
+[submodule "meta/dotbot"]
 	path = meta/dotbot
-	url = git@github.com:anishathalye/dotbot.git
-[submodule "plugins/dotbot-asdf"]
-	path = meta/plugins/dotbot-asdf
-	url = git@github.com:sobolevn/dotbot-asdf.git
+	url = https://github.com/anishathalye/dotbot
 [submodule "meta/plugins/dotbot-brew"]
 	path = meta/plugins/dotbot-brew
-	url = git@github.com:d12frosted/dotbot-brew.git
+	url = https://github.com/d12frosted/dotbot-brew.git
