@@ -8,4 +8,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [xcode-select --install]
+  # - [xcode-select --install]
