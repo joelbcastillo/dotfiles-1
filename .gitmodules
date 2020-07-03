@@ -4,3 +4,6 @@
 [submodule "plugins/dotbot-asdf"]
 	path = plugins/dotbot-asdf
 	url = git@github.com:sobolevn/dotbot-asdf.git
+[submodule "meta/plugins/dotbot-brew"]
+	path = meta/plugins/dotbot-brew
+	url = git@github.com:d12frosted/dotbot-brew.git
