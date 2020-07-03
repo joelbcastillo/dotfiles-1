@@ -8,6 +8,8 @@ CONFIG_SUFFIX=".yaml"
 META_DIR="meta"
 CONFIG_DIR="configs"
 PROFILES_DIR="profiles"
+PLUGIN_DIR="plugins"
+
 
 DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
@@ -28,11 +30,5 @@ echo ${CONFIGS}
 for config in ${CONFIGS} ${@}; do
 	echo -e "\nConfigure $config"
 	configFile="$(mktemp)" ; echo -e "$(<"${BASE_DIR}/${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${BASE_DIR}/${META_DIR}/${CONFIG_DIR}/${config}${CONFIG_SUFFIX}")" > "$configFile"
-    echo "${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}"
-    echo "${BASE_DIR}"
-    echo "${META_DIR}"
-    echo "${DOTBOT_DIR}"
-    echo "${DOTBOT_BIN}"
-    cat "$configFile"
-	"${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -v -d "${BASE_DIR}" -c "$configFile" ; rm -f "$configFile"
+	"${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -v -d "${BASE_DIR}" -c "$configFile" --plugin-dir "${BASE_DIR}/${META_DIR}/${PLUGIN_DIR}/dotbot-brew" --plugin-dir "${BASE_DIR}/${META_DIR}/${PLUGIN_DIR}/dotbot-asdf"; rm -f "$configFile"
 done
