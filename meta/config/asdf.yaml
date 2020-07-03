@@ -1,0 +1,21 @@
+---
+- asdf:
+  - plugin: python
+    url: https://github.com/tuvistavie/asdf-python.git
+    global: 3.8.3
+    versions:
+      - 3.8.3
+      - 3.7.7
+  - plugin: nodejs
+    url: https://github.com/asdf-vm/asdf-nodejs.git
+    global: 12.18.2
+    versions:
+      - 12.18.2
+      - 14.5.0
+  - plugin: ruby
+    url: https://github.com/asdf-vm/asdf-ruby.git
+    global: 2.7.1
+    versions:
+      - 2.7.1
+      - 2.6.6
+      - 2.5.8
