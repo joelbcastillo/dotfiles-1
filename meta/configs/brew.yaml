@@ -1,13 +1,2 @@
-- brew:
-  - asdf
-
-- tap:
-  - chanzuckerberg/tap
-  - github/gh
-  - homebrew/bundle
-  - homebrew/cask
-  - homebrew/cask-versions
-  - homebrew/core
-  - homebrew/services
-  - mongodb/brew
-  - twilio/brew
+- brewfile:
+  - Brewfile
