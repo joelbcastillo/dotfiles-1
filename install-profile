@@ -8,8 +8,9 @@ CONFIG_SUFFIX=".yaml"
 META_DIR="meta"
 CONFIG_DIR="configs"
 PROFILES_DIR="profiles"
+PLUGIN_DIR="${META_DIR}/plugins"
 
-DOTBOT_DIR="dotbot"
+DOTBOT_DIR="${META_DIR}/dotbot"
 DOTBOT_BIN="bin/dotbot"
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -24,6 +25,13 @@ done < "${META_DIR}/${PROFILES_DIR}/$1"
 shift
 
 echo ${CONFIGS}
+
+
+# Enable plugins
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "$BASE_DIR" \
+    --plugin-dir "${PLUGIN_DIR}/dotbot-asdf" \
+    --plugin-dir "${PLUGIN_DIR}/dotbot-brew" \
+    -c "${CONFIG}"
 
 for config in ${CONFIGS} ${@}; do
 	echo -e "\nConfigure $config"
