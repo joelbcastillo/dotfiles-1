@@ -1,6 +1,6 @@
 [submodule "dotbot"]
 	path = meta/dotbot
-	url = https://github.com/anishathalye/dotbot
+	url = git@github.com:anishathalye/dotbot.git
 [submodule "plugins/dotbot-asdf"]
 	path = meta/plugins/dotbot-asdf
 	url = git@github.com:sobolevn/dotbot-asdf.git
