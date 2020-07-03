@@ -1,4 +1,3 @@
-tap "chanzuckerberg/tap"
 tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -7,6 +6,11 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
 tap "twilio/brew"
+
+
+
+
+
 brew "ctags"
 brew "desk"
 brew "docker", link: false

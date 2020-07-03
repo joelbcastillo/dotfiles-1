@@ -1,2 +1,91 @@
-- brewfile:
-  - Brewfile
+- tap:
+  - github/gh
+  - homebrew/bundle
+  - homebrew/cask
+  - homebrew/cask-versions
+  - homebrew/core
+  - homebrew/services
+  - mongodb/brew
+  - twilio/brew
+
+- brew:
+  # Package Management
+  - asdf
+  # CLI Utils
+  - pipx
+  - hub
+  - gh
+  - jq
+  - awscli
+  - azure-cli
+  - tmate
+  - gopass
+  - sipcalc
+  - nmap
+  # tmux
+  - reattach-to-user-namespace
+  # Utils
+  - git
+  - p7zip
+  - mas
+  - wakatime-cli
+  - wget
+  - zsh
+  - tmux
+  # GPG
+  - pinentry-mac
+  - gnupg2
+  # Dev Packages
+  - libmagic
+  - zlib
+  - jpeg
+  - libtiff
+  - webp
+  - ctags
+  - libxml2
+
+# Installers
+- cask:
+  # Utilities
+  - 1password
+  - 1password-cli
+  - adoptopenjdk
+  - alred
+  - cheatsheet
+  - dash
+  - keybase
+  - setapp
+  - rectangle
+
+  # Dev Tools
+  - docker
+  - docker-toolbox
+  - dash
+  - ngrok
+  - virtualbox
+  - virtualbox-extension-pack
+  - vmware-fusion
+  - parallels
+  - vagrant
+
+  # Editors
+  - visual-studio-code
+  - jetbrains-toolbox
+
+
+  # Browsers
+  - firefox
+  - firefox-developer-edition
+  - google-chrome
+
+  # Media
+  - vlc
+  - yt-music
+  - spotify
+
+  # Communication
+  - zoomus
+  - slack
+  - hey
+  - discord
+
