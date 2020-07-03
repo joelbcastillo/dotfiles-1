@@ -33,5 +33,6 @@ for config in ${CONFIGS} ${@}; do
     echo "${META_DIR}"
     echo "${DOTBOT_DIR}"
     echo "${DOTBOT_BIN}"
+    cat "$configFile"
 	"${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" -c "$configFile" ; rm -f "$configFile"
 done
