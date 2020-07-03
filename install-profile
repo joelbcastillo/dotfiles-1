@@ -30,7 +30,7 @@ echo ${CONFIGS}
 # Enable plugins
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "$BASE_DIR" \
     --plugin-dir "${PLUGIN_DIR}/dotbot-asdf" \
-    --plugin-dir "${PLUGIN_DIR}/dotbot-brew" \
+    --plugin-dir "${PLUGIN_DIR}/dotbot-brewfile" \
     -c "${CONFIG}"
 
 for config in ${CONFIGS} ${@}; do
