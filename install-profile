@@ -28,7 +28,7 @@ echo ${CONFIGS}
 
 
 # Enable plugins
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "$BASE_DIR" \
+"${BASE_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "$BASE_DIR" \
     --plugin-dir "${PLUGIN_DIR}/dotbot-asdf" \
     --plugin-dir "${PLUGIN_DIR}/dotbot-brewfile" \
     -c "${CONFIG}"
