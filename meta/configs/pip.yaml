@@ -1,0 +1,4 @@
+- pipx:
+  file: pipx.txt
+  stdout: false
+  stderr: true

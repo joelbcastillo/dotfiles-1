@@ -7,3 +7,6 @@
 [submodule "meta/plugins/dotbot-brew"]
 	path = meta/plugins/dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
+[submodule "meta/plugins/dotbot-pip"]
+	path = meta/plugins/dotbot-pip
+	url = https://github.com/sobolevn/dotbot-pip.git

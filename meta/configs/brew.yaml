@@ -11,10 +11,19 @@
 - brew:
   # Package Management
   - asdf
+  - coreutils
+  - automake
+  - autoconf
+  - openssl
+  - libyaml
+  - readline
+  - libxslt
+  - libtool
+  - unixodbc
+  - unzip
+  - curl
   # CLI Utils
   - pipx
-  - hub
-  - gh
   - jq
   - awscli
   - azure-cli
@@ -31,7 +40,6 @@
   - wakatime-cli
   - wget
   - zsh
-  - tmux
   # GPG
   - pinentry-mac
   - gnupg2
@@ -88,4 +96,3 @@
   - slack
   - hey
   - discord
-
