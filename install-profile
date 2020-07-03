@@ -26,12 +26,6 @@ shift
 
 echo ${CONFIGS}
 
-# # Enable plugins
-# "${BASE_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "$BASE_DIR" \
-#     --plugin-dir "${PLUGIN_DIR}/dotbot-asdf" \
-#     --plugin-dir "${PLUGIN_DIR}/dotbot-brew" \
-#     -c "${CONFIG}"
-
 for config in ${CONFIGS} ${@}; do
 	echo -e "\nConfigure $config"
 	configFile="$(mktemp)" ; echo -e "$(<"${BASE_DIR}/${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${BASE_DIR}/${META_DIR}/${CONFIG_DIR}/${config}${CONFIG_SUFFIX}")" > "$configFile"
