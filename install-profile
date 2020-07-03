@@ -8,7 +8,6 @@ CONFIG_SUFFIX=".yaml"
 META_DIR="meta"
 CONFIG_DIR="configs"
 PROFILES_DIR="profiles"
-PLUGIN_DIR="${META_DIR}/plugins"
 
 DOTBOT_DIR="${META_DIR}/dotbot"
 DOTBOT_BIN="bin/dotbot"
