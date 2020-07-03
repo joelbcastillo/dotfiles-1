@@ -1,4 +1,3 @@
----
 - asdf:
   - plugin: python
     url: https://github.com/tuvistavie/asdf-python.git
