@@ -10,3 +10,6 @@
 [submodule "prezto"]
 	path = prezto
 	url = git://github.com/sorin-ionescu/prezto.git
+[submodule ".dotbot/plugins/dotbot-ghq"]
+	path = .dotbot/plugins/dotbot-ghq
+	url = git://github.com/klane/dotbot-ghq.git
