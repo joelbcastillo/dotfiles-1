@@ -38,6 +38,7 @@
   - zlib
   - zsh
   - pipx
+  - tmux
 
 - cask:
   - visual-studio-code
