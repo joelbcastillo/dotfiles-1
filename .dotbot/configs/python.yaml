@@ -19,6 +19,6 @@
   # - [echo 'eval (pipenv --completion)' > ~/.config/fish/completions/pipenv.fish, Adding pipenv fish completions]
   # - [poetry completions fish > ~/.config/fish/completions/poetry.fish, Adding poetry fish completions]
   - [mkdir -p ~/.zfunc && ~/.local/bin/poetry completions zsh > ~/.zfunc/_poetry, Adding poetry Zsh completions]
-  - [mkdir -p ~/.zfunc && 'eval (~/.local/bin/pipenv --completion)' > ~/.zfunc/_pipenv, Adding pipenv Zsh completions]
+  - [mkdir -p ~/.zfunc && ~/.local/bin/pipenv --completion > ~/.zfunc/_pipenv, Adding pipenv Zsh completions]
   - [poetry config virtualenvs.in-project true, Setting poetry configuration variable]
   - [asdf reshim, Recreating asdf shims]
