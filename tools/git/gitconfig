@@ -111,7 +111,6 @@
 [core]
   autocrlf = false
 	editor = code --wait
-  excludesfile = ~/.yadr/git/gitignore
 [advice]
   statusHints = false
 [diff]
