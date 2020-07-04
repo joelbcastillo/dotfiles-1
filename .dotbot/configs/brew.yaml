@@ -2,8 +2,39 @@
     ~/Brewfile: tools/homebrew/Brewfile
     /usr/local/bin/brewup: tools/homebrew/brewup
 
-- brewfile:
-  - ~/Brewfile
+- tap:
+  - github/gh
+  - homebrew/bundle
+  - homebrew/cask
+  - homebrew/cask-fonts   
+  - homebrew/cask-versions
+  - homebrew/core
+  - homebrew/services
+  - mongodb/brew
+  - twilio/brew
+
+- brew:
+  - ctags
+  - gh
+  - git
+  - gnupg
+  - gopass
+  - jpeg
+  - jq
+  - libmagic
+  - libtiff
+  - libxml2
+  - mas
+  - p7zip
+  - pinentry
+  - pinentry-mac
+  - travis
+  - webp
+  - wget
+  - zlib
+  - zsh
+
+- cask: 
 
 - shell:
   - [brewup, Updating Homebrew and installed programs]
