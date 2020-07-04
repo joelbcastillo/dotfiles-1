@@ -41,6 +41,8 @@
 
 - cask:
   - visual-studio-code
+  - iterm2
+  - alfred
 
 - shell:
   - [brewup, Updating Homebrew and installed programs]
