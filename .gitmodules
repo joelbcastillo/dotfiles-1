@@ -1,0 +1,12 @@
+[submodule ".dotbot/dotbot"]
+	path = .dotbot/dotbot
+	url = git://github.com/anishathalye/dotbot
+[submodule "prezto"]
+	path = prezto
+	url = git://github.com/sorin-ionescu/prezto.git
+[submodule ".dotbot/plugins/dotbot-asdf"]
+	path = .dotbot/plugins/dotbot-asdf
+	url = git@github.com:sobolevn/dotbot-asdf.git
+[submodule ".dotbot/plugins/dotbot-brew"]
+	path = .dotbot/plugins/dotbot-brew
+	url = https://github.com/d12frosted/dotbot-brew.git
