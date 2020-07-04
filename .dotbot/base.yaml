@@ -3,9 +3,11 @@
       create: true
       relink: true
       force: true
+    shell:
+      stdout: true
+      stderr: true
 
 - clean: ['~']
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  # - [xcode-select --install]

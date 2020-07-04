@@ -1,0 +1,16 @@
+- create:
+  - ~/.zsh.before
+  - ~/.zsh.after
+  
+
+- link:
+    ~/.zprezto: prezto
+    ~/.zlogin: zsh/zlogin
+    ~/.zlogout: zsh/zlogout
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.zprofile: zsh/zprofile
+    ~/.zshenv: zsh/zshenv
+    ~/.zshrc: zsh/zshrc
+
+- shell:
+  - [zsh -c 'zprezto-update', Updating Zsh plugins]

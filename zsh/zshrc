@@ -1,0 +1,21 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
+
+# Created by `userpath` on 2020-01-08 02:10:19
+export PATH="$PATH:/Users/joel/.local/bin"
+export GPG_TTY=$(tty)
+
+# added by travis gem
+[ -f /Users/joel/.travis/travis.sh ] && source /Users/joel/.travis/travis.sh
