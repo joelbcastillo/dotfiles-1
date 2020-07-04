@@ -11,6 +11,3 @@
     ~/.zprofile: zsh/zprofile
     ~/.zshenv: zsh/zshenv
     ~/.zshrc: zsh/zshrc
-
-- shell:
-  - [zsh -c 'zprezto-update', Updating Zsh plugins]
