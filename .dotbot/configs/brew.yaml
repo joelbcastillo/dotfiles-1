@@ -17,10 +17,12 @@
   - asdf
   - ctags
   - gh
+  - ghq
   - git
   - git-lfs
   - gnupg
   - gopass
+  - htop
   - jpeg
   - jq
   - libmagic
@@ -35,7 +37,6 @@
   - wget
   - zlib
   - zsh
-  - htop
 
 - cask:
   - visual-studio-code
