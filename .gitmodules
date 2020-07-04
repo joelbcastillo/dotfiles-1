@@ -1,15 +1,6 @@
-[submodule ".dotbot/plugins/dotbot-asdf"]
-	path = .dotbot/plugins/dotbot-asdf
-	url = git@github.com:sobolevn/dotbot-asdf.git
-[submodule ".dotbot/plugins/dotbot-brew"]
-	path = .dotbot/plugins/dotbot-brew
-	url = git://github.com/d12frosted/dotbot-brew.git
-[submodule ".dotbot/plugins/dotbot-pip"]
-	path = .dotbot/plugins/dotbot-pip
-	url = git://github.com/sobolevn/dotbot-pip.git
-[submodule ".dotbot/plugins/dotbot-vscode"]
-	path = .dotbot/plugins/dotbot-vscode
-	url = git://github.com/hujianxin/dotbot-vscode.git
 [submodule ".dotbot/dotbot"]
 	path = .dotbot/dotbot
 	url = git://github.com/anishathalye/dotbot
+[submodule "prezto"]
+	path = prezto
+	url = git://github.com/sorin-ionescu/prezto.git
