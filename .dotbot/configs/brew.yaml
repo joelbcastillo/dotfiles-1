@@ -34,6 +34,7 @@
   - wget
   - zlib
   - zsh
+  - htop
 
 - cask:
   - visual-studio-code
