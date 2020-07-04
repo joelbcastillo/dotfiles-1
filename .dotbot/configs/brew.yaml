@@ -34,7 +34,8 @@
   - zlib
   - zsh
 
-- cask: 
+- cask:
+  - alfred
 
 - shell:
   - [brewup, Updating Homebrew and installed programs]
