@@ -4,14 +4,21 @@
 
 - asdf:
   - plugin: python
+    global: latest:3.8
     versions:
       - latest:3.7
       - latest:3.8
 
+- pipx:
+    file: tools/pipx/requirements.txt
+    stdout: true
+    stderr: true
+
 - shell:
-  - [$DOTFILES/tools/python/install-poetry, Installing poetry]
-  - [echo 'eval (pipenv --completion)' > ~/.config/fish/completions/pipenv.fish, Adding pipenv fish completions]
-  - [poetry completions fish > ~/.config/fish/completions/poetry.fish, Adding poetry fish completions]
+  # - [$DOTFILES/tools/python/install-poetry, Installing poetry]
+  # - [echo 'eval (pipenv --completion)' > ~/.config/fish/completions/pipenv.fish, Adding pipenv fish completions]
+  # - [poetry completions fish > ~/.config/fish/completions/poetry.fish, Adding poetry fish completions]
   - [mkdir -p ~/.zfunc && poetry completions zsh > ~/.zfunc/_poetry, Adding poetry Zsh completions]
+  - [mkdir -p ~/.zfunc && 'eval (pipenv --completion)' > ~/.zfunc/_pipenv, Adding pipenv Zsh completions]
   - [poetry config virtualenvs.in-project true, Setting poetry configuration variable]
   - [asdf reshim, Recreating asdf shims]
