@@ -13,3 +13,6 @@
 [submodule ".dotbot/plugins/dotbot-ghq"]
 	path = .dotbot/plugins/dotbot-ghq
 	url = git://github.com/klane/dotbot-ghq.git
+[submodule ".dotbot/plugins/dotbot-pip"]
+	path = .dotbot/plugins/dotbot-pip
+	url = git://github.com/sobolevn/dotbot-pip.git
