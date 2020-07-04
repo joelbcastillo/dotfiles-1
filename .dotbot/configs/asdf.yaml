@@ -5,9 +5,9 @@
   - plugin: go
     url: https://github.com/kennyp/asdf-golang
   - plugin: python
-    global: 3.8.3
+    global: latest
     versions:
-      - 3.8.3
+      - latest
   - plugin: ruby
   - plugin: nodejs
     url: https://github.com/asdf-vm/asdf-nodejs.git
