@@ -17,6 +17,7 @@
   - ctags
   - gh
   - git
+  - git-lfs
   - gnupg
   - gopass
   - jpeg
@@ -35,7 +36,7 @@
   - zsh
 
 - cask:
-  - alfred
+  - visual-studio-code
 
 - shell:
   - [brewup, Updating Homebrew and installed programs]
