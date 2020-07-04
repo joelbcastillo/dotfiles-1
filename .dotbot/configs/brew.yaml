@@ -37,6 +37,7 @@
   - wget
   - zlib
   - zsh
+  - pipx
 
 - cask:
   - visual-studio-code
