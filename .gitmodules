@@ -8,7 +8,7 @@
 	path = .dotbot/plugins/dotbot-brew
 	url = git://github.com/d12frosted/dotbot-brew.git
 [submodule "prezto"]
-	path = prezto
+	path = shell/zsh/prezto
 	url = git://github.com/sorin-ionescu/prezto.git
 [submodule ".dotbot/plugins/dotbot-ghq"]
 	path = .dotbot/plugins/dotbot-ghq

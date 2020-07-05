@@ -16,3 +16,7 @@
       - 2.5.8
   - plugin: nodejs
     url: https://github.com/asdf-vm/asdf-nodejs.git
+  - plugin: terraform
+    url: https://github.com/Banno/asdf-hashicorp.git
+  - plugin: vault
+    url: https://github.com/Banno/asdf-hashicorp.git

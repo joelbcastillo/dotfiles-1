@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+
+META_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.dotbot"
+PROFILE_DIR="${META_DIR}/profiles"
+
+PROFILE=${1:-macos}
+
+if [ ! -f "${PROFILE_DIR}/${PROFILE}" ]; then
+    echo "${PROFILE} does not exist."
+fi
+
+echo "Installing Dotbot Profile: ${PROFILE}"
+# shellcheck disable=SC1091,SC1090
+. "${META_DIR}/install-profile" "${PROFILE}"

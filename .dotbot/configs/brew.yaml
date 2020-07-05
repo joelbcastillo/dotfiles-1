@@ -44,6 +44,7 @@
   - visual-studio-code
   - iterm2
   - alfred
+  - font-jetbrainsmono-nerd-font
 
-- shell:
-  - [brewup, Updating Homebrew and installed programs]
+# - shell:
+  # - [brewup, Updating Homebrew and installed programs]

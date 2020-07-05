@@ -11,7 +11,7 @@ endif
 
 mac: macos
 
-personal: personal
+personal: macos personal
 
 submodule:
 	@echo "Updating submodules"

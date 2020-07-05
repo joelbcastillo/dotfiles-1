@@ -1,14 +1,17 @@
 - create:
   - ~/.zsh.before
   - ~/.zsh.after
+  - ~/.secrets
   
 
 - link:
-    ~/.zprezto: prezto
-    ~/.zlogin: zsh/zlogin
-    ~/.zlogout: zsh/zlogout
-    ~/.zpreztorc: zsh/zpreztorc
-    ~/.zprofile: zsh/zprofile
-    ~/.zshenv: zsh/zshenv
-    ~/.zshrc: zsh/zshrc
-    ~/.zmodules: prezto/modules
+    ~/.zprezto: shell/zsh/prezto
+    ~/.zlogin: shell/zsh/zlogin
+    ~/.zlogout: shell/zsh/zlogout
+    ~/.zpreztorc: shell/zsh/zpreztorc
+    ~/.zprofile: shell/zsh/zprofile
+    ~/.zshenv: shell/zsh/zshenv
+    ~/.zshrc: shell/zsh/zshrc
+    ~/.zmodules: shell/zsh/prezto/modules
+
+  
