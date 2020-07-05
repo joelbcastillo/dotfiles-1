@@ -1,0 +1,63 @@
+{
+    // Editor
+    "editor.fontFamily": "'Jetbrains Mono', 'Jetbrains Mono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": "'ss02', 'ss03', 'ss05', 'ss07'",
+    "editor.scrollBeyondLastLine": false,
+
+    // Files
+    "files.associations": {
+        "zshrc": "shellscript"
+    },
+    "files.autoSave": "onFocusChange",
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+
+    // Telemetry
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
+    // Terminal
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+
+    // Workbench
+    "workbench.colorTheme": "GitHub Dark",
+
+
+    // Extensions
+
+    // GitLens
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.location": "gitlens",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens",
+
+    // AudoDocString
+    "autoDocstring.docstringFormat": "google",
+
+    // Python
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": ["$HOME/.local/bin/flake8"],
+    "python.linting.pylintEnabled": false,
+    "python.formatting.blackPath": "$HOME/.local/bin/black",
+    "python.formatting.provider": "black",
+    "python.experiments.enabled": true,
+    "python.experiments.optInto": [
+        "DebugAdapterFactory - experiment",
+        "Reload - experiment"
+    ],
+
+    // Markdown
+    "markdownlint.config": {
+        "MD003": { "style": "setext_with_atx" }
+    },
+
+    // Terraform
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
+        ]
+    },
+}
