@@ -43,7 +43,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' 
 
 zstyle ':prezto:load' pmodule-dirs \
-  '$HOME/.zprezto/modules'
+  '$HOME/.zmodules'
 
 #
 # Editor
