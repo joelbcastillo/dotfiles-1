@@ -1,6 +1,7 @@
 
 - link:
     ~/.config/flake8: tools/python/flake8
+    ~/.config/isort.cfg: tools/python/isort
 
 - asdf:
   - plugin: python
@@ -15,9 +16,6 @@
     stderr: true
 
 - shell:
-  # - [$DOTFILES/tools/python/install-poetry, Installing poetry]
-  # - [echo 'eval (pipenv --completion)' > ~/.config/fish/completions/pipenv.fish, Adding pipenv fish completions]
-  # - [poetry completions fish > ~/.config/fish/completions/poetry.fish, Adding poetry fish completions]
   - [mkdir -p ~/.zfunc && ~/.local/bin/poetry completions zsh > ~/.zfunc/_poetry, Adding poetry Zsh completions]
   - [mkdir -p ~/.zfunc && ~/.local/bin/pipenv --completion > ~/.zfunc/_pipenv, Adding pipenv Zsh completions]
   - [poetry config virtualenvs.in-project true, Setting poetry configuration variable]
