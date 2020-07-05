@@ -130,3 +130,6 @@
 	required = true
 [ghq]
   root = ~/.repos
+[user]
+	name = Joel Castillo
+	email = joel.castillohey.com

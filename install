@@ -4,13 +4,35 @@ set -e
 
 META_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.dotbot"
 PROFILE_DIR="${META_DIR}/profiles"
+CONFIG_DIR="${META_DIR}/configs"
+CONFIG_SUFFIX=".yaml"
 
-PROFILE=${1:-macos}
+TYPE=${1}
 
-if [ ! -f "${PROFILE_DIR}/${PROFILE}" ]; then
-    echo "${PROFILE} does not exist."
+usage(){
+	printf "Usage: [profile|config] <name>\n"
+    printf "    name: name of the profile or config to install\n"
+	exit 1
+}
+
+if [ "${TYPE}" == "profile" ]; then
+    PROFILE=${2}
+    if [ ! -f "${PROFILE_DIR}/${PROFILE}" ]; then
+        echo "${PROFILE} does not exist."
+    fi
+    printf "Installing Dotbot Profile: %s\n" "${PROFILE}"
+    # shellcheck disable=SC1091,SC1090
+    . "${META_DIR}/install-profile" "${PROFILE}"
+elif [ "${TYPE}" == "config" ]; then
+    CONFIG=${2}
+    if [ ! -f "${CONFIG_DIR}/${CONFIG}${CONFIG_SUFFIX}" ]; then
+        echo "${CONFIG} does not exist."
+    fi
+    printf "Installing Dotbot Config: %s\n" "${CONFIG}"
+    # shellcheck disable=SC1091,SC1090
+    . "${META_DIR}/install-config" "${CONFIG}"
+else
+    usage
 fi
 
-echo "Installing Dotbot Profile: ${PROFILE}"
-# shellcheck disable=SC1091,SC1090
-. "${META_DIR}/install-profile" "${PROFILE}"
+

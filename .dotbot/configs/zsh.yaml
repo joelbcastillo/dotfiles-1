@@ -12,6 +12,5 @@
     ~/.zprofile: shell/zsh/zprofile
     ~/.zshenv: shell/zsh/zshenv
     ~/.zshrc: shell/zsh/zshrc
-    ~/.zmodules: shell/zsh/prezto/modules
-
+    ~/.zmodules: shell/zsh/modules
   
