@@ -20,4 +20,4 @@ export GPG_TTY=$(tty)
 # added by travis gem
 [ -f /Users/joel/.travis/travis.sh ] && source /Users/joel/.travis/travis.sh
 
-eval "$(starship init zsh)"
+source <("/usr/local/bin/starship" init zsh --print-full-init)
