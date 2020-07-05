@@ -9,9 +9,9 @@ else
 	@make linux
 endif
 
-personal: 
-	@.dotbot/install-profile macos
-	@.dotbot/install-profile personal
+mac: macos
+
+personal: personal
 
 submodule:
 	@echo "Updating submodules"
