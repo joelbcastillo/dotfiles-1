@@ -9,7 +9,9 @@ else
 	@make linux
 endif
 
-mac: macos
+personal: 
+	@make macos
+	@make personal
 
 submodule:
 	@echo "Updating submodules"
