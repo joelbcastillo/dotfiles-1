@@ -1,121 +1,150 @@
-# brew "chanzuckerberg/tap/fogg"
-# brew "desk"
-# brew "docker", link: false
-# brew "ghi"
-# brew "git"
-# brew "github/gh/gh"
-# brew "gmailctl"
-# brew "go"
-# brew "gopass"
-# brew "graphviz"
-# brew "hashcat"
-# brew "hub"
-# brew "hugo"
-# brew "joplin", link: false
-# brew "jpeg"
-# brew "jq"
-# brew "jsonnet"
-# brew "libmagic"
-# brew "libtiff"
-# brew "libxml2"
-# brew "little-cms2"
-# brew "mas"
-# brew "mongodb/brew/mongodb-community"
-# brew "nmap"
-# brew "node"
-# brew "p7zip"
-# brew "pinentry-mac"
-# brew "pinentry"
-# brew "pipx"
-# brew "pyenv"
-# brew "python"
-# brew "rbenv"
-# brew "reattach-to-user-namespace"
-# brew "ruby-build"
-# brew "shellcheck"
-# brew "sipcalc"
-# brew "speedtest-cli"
-# brew "terraform-docs"
-# brew "terraform"
-# brew "terraformer"
-# brew "the_silver_searcher"
-# brew "tmate"
-# brew "tmux"
-# brew "travis"
-# brew "tree"
-# brew "twilio/brew/twilio"
-# brew "wakatime-cli"
-# brew "webp"
-# brew "wget"
-# brew "zlib"
-# brew "zsh"
-# cask "1password-cli"
-# cask "1password"
-# cask "adobe-creative-cloud"
-# cask "adoptopenjdk"
-# cask "aerial"
-# cask "alfred"
-# cask "authy"
-# cask "barrier"
-# cask "basecamp"
-# cask "cheatsheet"
-# cask "dash"
-# cask "discord"
-# cask "docker-toolbox"
-# cask "docker"
-# cask "dotnet-sdk"
-# cask "dropbox"
-# cask "fantastical"
-# cask "firefox-developer-edition"
-# cask "firefox"
-# cask "franz"
-# cask "github"
-# cask "google-chrome"
-# cask "hey"
-# cask "iterm2"
-# cask "jetbrains-toolbox"
-# cask "joplin"
-# cask "keybase"
-# cask "kitematic"
-# cask "microsoft-office-2016"
-# cask "mindforger"
-# cask "mono-mdk-for-visual-studio"
-# cask "ngrok"
-# cask "notion"
-# cask "obs-virtualcam"
-# cask "obs"
-# cask "omnigraffle"
-# cask "openlp"
-# cask "parallels"
-# cask "powershell"
-# cask "protonvpn"
-# cask "rectangle"
-# cask "screens"
-# cask "scrivener"
-# cask "setapp"
-# cask "signal"
-# cask "slack"
-# cask "spotify"
-# cask "teamviewer"
-# cask "tower2"
-# cask "transmit"
-# cask "vagrant"
-# cask "virtualbox-extension-pack"
-# cask "virtualbox"
-# cask "visual-studio-code"
-# cask "visual-studio"
-# cask "vlc"
-# cask "vmware-fusion"
-# cask "whatsapp"
-# cask "wireshark"
-# cask "yt-music"
-# cask "zoomus"
-brew "ctags"
-tap "github/gh"
-tap "homebrew/bundle"
-tap "homebrew/cask-versions"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/services"
-tap "mongodb/brew"
-tap "twilio/brew"
+# Taps
+tap 'github/gh' if OS.mac?
+tap 'homebrew/cask-versions' if OS.mac?
+tap 'homebrew/cask' if OS.mac?
+tap 'homebrew/cask-fonts' if OS.mac?
+
+# Dupes
+brew 'coreutils'
+brew 'curl'
+brew 'diffutils'
+brew 'findutils'
+brew 'gawk'
+brew 'gnu-sed'
+brew 'gnu-which'
+brew 'grep'
+brew 'make'
+brew 'rsync'
+brew 'wget'
+
+# Development
+brew 'travis'
+brew 'wakatime-cli'
+
+# Utilities
+brew 'bat'
+brew 'exa'
+brew 'fasd'
+brew 'fd'
+brew 'fselect'
+brew 'fzf'
+brew 'gopass'
+brew 'htop'
+brew 'hyperfine'
+brew 'reattach-to-user-namespace'
+brew 'rename'
+brew 'ripgrep'
+brew 'sd'
+brew 'speedtest-cli'
+brew 'tmux'
+brew 'tokei'
+brew 'watchexec'
+
+# macOS Utilities
+brew 'mas' if OS.mac?
+brew 'osxutils' if OS.mac?
+brew 'pinentry-mac' if OS.mac?
+brew 'trash' if OS.mac?
+
+# Information Utilities
+brew 'howdoi'
+brew 'tldr'
+brew 'wtf'
+
+# Shells
+brew 'bash'
+brew 'fish'
+brew 'zsh'
+brew 'antibody'
+brew 'starship'
+
+# Programming Languages
+brew 'python'
+
+# Utilities
+brew 'direnv'
+brew 'gnupg'
+brew 'openssh'
+
+# Git
+brew 'git'
+brew 'git-lfs'
+brew 'gh'
+brew 'ghi'
+brew 'ghq'
+brew 'hub'
+brew 'lazygit'
+brew 'pre-commit'
+
+# Programming Tools
+brew 'asdf'
+brew 'bats-core'
+brew 'shellcheck'
+
+# Python Tools
+# brew 'black'
+# brew 'flake8'
+# brew 'mkdocs'
+# brew 'pipenv'
+
+# IDEs & Editors
+cask 'jetbrains-toolbox'
+cask 'visual-studio-code'
+
+# Virtualization
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+cask 'vmware-fusion'
+
+# Images
+brew 'imagemagick'
+brew 'jpeg'
+brew 'libtiff'
+brew 'webp'
+
+# Casks
+cask '1password'
+cask '1password-cli'
+cask 'adoptopenjdk'
+cask 'aerial'
+cask 'alfred'
+cask 'cheatsheet'
+cask 'dash'
+cask 'discord'
+cask 'docker'
+cask 'dropbox'
+cask 'font-fira-code'
+cask 'font-firacode-nerd-font'
+cask 'font-jetbrains-mono'
+cask 'font-jetbrainsmono-nerd-font'
+cask 'firefox'
+cask 'firefox-developer-edition'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'mactex'
+cask 'microsoft-office-2016'
+cask 'microsoft-teams'
+cask 'postgres'
+cask 'setapp'
+cask 'slack'
+cask 'spotify'
+cask 'transmit'
+cask 'whatsapp'
+cask 'wireshark'
+cask 'yt-music'
+cask 'zoomus'
+
+# Mac App Store
+mas 'Core Tunnel', id: 1354318707
+mas 'Friendly Streaming', id: 553245401
+mas 'GarageBand', id: 682658836
+mas 'iMovie', id: 408981434
+mas 'Jira', id: 1475897096
+mas 'Keynote', id: 409183694
+mas 'Meeter', id: 1510445899
+mas 'Messenger', id: 1480068668
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+mas 'Reeder', id: 880001334
+mas 'Tailscale', id: 1475387142
+mas 'The Unarchiver', id: 425424353
