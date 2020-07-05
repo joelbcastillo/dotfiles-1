@@ -16,9 +16,9 @@ style = "bold red"
 threshold = 30
 style = "bold yellow"
 
-[git_status]
-staged.value = "++"
-staged.style = "green"
+[git_status.staged]
+value = "++"
+style = "green"
 
 [hostname]
 ssh_only = false

@@ -7,35 +7,106 @@ PROFILE_DIR="${META_DIR}/profiles"
 CONFIG_DIR="${META_DIR}/configs"
 CONFIG_SUFFIX=".yaml"
 
-TYPE=${1}
+OPERATION=${1}
 
-usage(){
-	printf "Usage: [profile|config] <name>\n"
-    printf "    name: name of the profile or config to install\n"
-	exit 1
+SELF_NAME=$(basename "$0")
+
+function usage() {
+    simple_blue_echo "Usage: [profile|config|bootstrap] <name>"
+    simple_blue_echo "Options:"
+    simple_blue_echo "  profile - setup the specified profiles. Profiles are found in .dotbot/profiles"
+    simple_blue_echo "  config - setup the specified config. Configs are found in .dotbot/configs"
+    simple_blue_echo "  bootstrap - Bootstrap the system for dotfiles."
+    simple_blue_echo "Arguments:"
+    simple_blue_echo "  name: name of the profile or config to install"
+    exit 0
 }
 
-echo "Updating submodules"
-git submodule update --init --recursive --remote
+function submodules() {
+    gecho "Updating submodules"
+    git submodule update --init --recursive --remote
+}
 
-if [ "${TYPE}" == "profile" ]; then
-    PROFILE=${2}
+
+function exists() {
+    command -v "$1" >/dev/null 2>&1
+}
+
+
+function prompt() {
+    read -r -p "$1 [y|N] " response
+    [[ $response =~ (yes|y|Y) ]] || return 1
+}
+# Prints warning/error $MESSAGE in red foreground color
+#
+# For e.g. You can use the convention of using RED color for [E]rror messages
+function red_echo() {
+    printf "\x1b[1;31m[E] %s: %s\e[0m\n" "${1}" "${2}"
+}
+
+function simple_red_echo() {
+    printf "\x1b[1;31m%s\e[0m\n" "${1}"
+}
+
+# Prints success/info $MESSAGE in green foreground color
+#
+# For e.g. You can use the convention of using GREEN color for [S]uccess messages
+function green_echo() {
+    printf "\x1b[1;32m[S] %s: %s\e[0m\n" "${1}" "${2}"
+}
+
+function simple_green_echo() {
+    printf "\x1b[1;32m%s\e[0m\n" "${1}"
+}
+
+# Prints $MESSAGE in blue foreground color
+#
+# For e.g. You can use the convetion of using BLUE color for [I]nfo messages
+# that require special user attention (especially when script requires input from user to continue)
+function blue_echo() {
+    printf "\x1b[1;34m[I] %s: %s\e[0m\n" "${1}" "${2}"
+}
+
+function simple_blue_echo() {
+    printf "\x1b[1;34m%s\e[0m\n" "${1}"
+}
+
+function bootstrap() {
+    if ! exists brew; then
+        blue_echo "${SELF_NAME}" 'Installing Homebrew'
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
+    brew install python
+}
+
+function install_profile() {
+    PROFILE=${1}
     if [ ! -f "${PROFILE_DIR}/${PROFILE}" ]; then
         echo "${PROFILE} does not exist."
     fi
     printf "Installing Dotbot Profile: %s\n" "${PROFILE}"
+    submodules
     # shellcheck disable=SC1091,SC1090
     . "${META_DIR}/install-profile" "${PROFILE}"
-elif [ "${TYPE}" == "config" ]; then
-    CONFIG=${2}
+}
+
+function install_config() {
+    CONFIG=${1}
     if [ ! -f "${CONFIG_DIR}/${CONFIG}${CONFIG_SUFFIX}" ]; then
         echo "${CONFIG} does not exist."
     fi
     printf "Installing Dotbot Config: %s\n" "${CONFIG}"
+    submodules
     # shellcheck disable=SC1091,SC1090
     . "${META_DIR}/install-config" "${CONFIG}"
+}
+
+if [ "${OPERATION}" == 'profile' ]; then
+    install_profile "${2}"
+elif [ "${OPERATION}" == 'config' ]; then
+    install_config "${2}"
+elif [ "${OPERATION}" == 'bootstrap' ]; then
+    bootstrap
 else
     usage
 fi
-
-
