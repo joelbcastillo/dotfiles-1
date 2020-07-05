@@ -1,5 +1,6 @@
-# set your user tokens as environment variables, such as ~/.secrets
-# See the README for examples.
+[user]
+	name = Joel Castillo
+	email = jocastillo@records.nyc.gov
 [color]
   ui = true
 [color "branch"]
@@ -91,15 +92,15 @@
   svnl = svn log --oneline --show-commit
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+[merge]
+  summary = true
+  verbosity = 1
+  tool = vscode
 [mergetool]
   prompt = false
 [mergetool "vscode"]
   cmd = code --wait $MERGED  # use fugitive.vim for 3-way merge
   keepbackup=false
-[merge]
-  summary = true
-  verbosity = 1
-  tool = vscode
 [apply]
   whitespace = nowarn
 [branch]
@@ -111,6 +112,7 @@
 [core]
   autocrlf = false
 	editor = code --wait
+  excludesfile = ~/.gitignore
 [advice]
   statusHints = false
 [diff]
@@ -129,8 +131,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[user]
-	name = Joel Castillo
-	email = jocastillo@records.nyc.gov
 [ghq]
   root = ~/.repos
