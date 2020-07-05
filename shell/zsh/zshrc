@@ -16,6 +16,12 @@ for config_file ($HOME/.dotfiles/shell/zsh/config/*.zsh) source $config_file
 # Created by `userpath` on 2020-01-08 02:10:19
 export PATH="$PATH:/Users/joel/.local/bin"
 export GPG_TTY=$(tty)
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
 
 # added by travis gem
 [ -f /Users/joel/.travis/travis.sh ] && source /Users/joel/.travis/travis.sh
