@@ -13,4 +13,5 @@
     ~/.zshenv: shell/zsh/zshenv
     ~/.zshrc: shell/zsh/zshrc
     ~/.zmodules: shell/zsh/modules
+    ~/.config/starship.toml: shells/starship/starship.toml
   

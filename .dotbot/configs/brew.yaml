@@ -5,5 +5,5 @@
 - brewfile:
   - ~/Brewfile    
 
- - shell:
+- shell:
   - [brewup, Updating Homebrew and installed programs]

@@ -15,6 +15,9 @@ usage(){
 	exit 1
 }
 
+echo "Updating submodules"
+git submodule update --init --recursive --remote
+
 if [ "${TYPE}" == "profile" ]; then
     PROFILE=${2}
     if [ ! -f "${PROFILE_DIR}/${PROFILE}" ]; then
