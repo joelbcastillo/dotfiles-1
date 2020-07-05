@@ -10,8 +10,8 @@ else
 endif
 
 personal: 
-	@make macos
-	@make personal
+	@.dotbot/install-profile macos
+	@.dotbot/install-profile personal
 
 submodule:
 	@echo "Updating submodules"
