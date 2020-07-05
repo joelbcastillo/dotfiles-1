@@ -38,11 +38,11 @@ alias lsg='ll | grep'
 
 # Alias Editing
 TRAPHUP() {
-  source $dotfiles/shell/zsh/config/aliases.zsh
+  source $dotfiles/shells/zsh/config/aliases.zsh
 }
 
-alias ae='code $dotfiles/shell/zsh/config/aliases.zsh' #alias edit
-alias ar='source $dotfiles/shell/zsh/config/aliases.zsh'  #alias reload
+alias ae='code $dotfiles/shells/zsh/config/aliases.zsh' #alias edit
+alias ar='source $dotfiles/shells/zsh/config/aliases.zsh'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 
 # vim using

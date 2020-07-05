@@ -2,16 +2,15 @@
   - ~/.zsh.before
   - ~/.zsh.after
   - ~/.secrets
-  
+
 
 - link:
-    ~/.zprezto: shell/zsh/prezto
-    ~/.zlogin: shell/zsh/zlogin
-    ~/.zlogout: shell/zsh/zlogout
-    ~/.zpreztorc: shell/zsh/zpreztorc
-    ~/.zprofile: shell/zsh/zprofile
-    ~/.zshenv: shell/zsh/zshenv
-    ~/.zshrc: shell/zsh/zshrc
-    ~/.zmodules: shell/zsh/modules
+    ~/.zprezto: shells/zsh/prezto
+    ~/.zlogin: shells/zsh/zlogin
+    ~/.zlogout: shells/zsh/zlogout
+    ~/.zpreztorc: shells/zsh/zpreztorc
+    ~/.zprofile: shells/zsh/zprofile
+    ~/.zshenv: shells/zsh/zshenv
+    ~/.zshrc: shells/zsh/zshrc
+    ~/.zmodules: shells/zsh/modules
     ~/.config/starship.toml: shells/starship/starship.toml
-  

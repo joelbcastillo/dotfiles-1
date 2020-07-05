@@ -1,18 +1,18 @@
 [submodule ".dotbot/dotbot"]
-	path = .dotbot/dotbot
-	url = git://github.com/anishathalye/dotbot.git
+    path = .dotbot/dotbot
+    url = git://github.com/anishathalye/dotbot.git
 [submodule ".dotbot/plugins/dotbot-asdf"]
-	path = .dotbot/plugins/dotbot-asdf
-	url = git://github.com/sobolevn/dotbot-asdf.git
+    path = .dotbot/plugins/dotbot-asdf
+    url = git://github.com/sobolevn/dotbot-asdf.git
 [submodule ".dotbot/plugins/dotbot-brew"]
-	path = .dotbot/plugins/dotbot-brew
-	url = git://github.com/d12frosted/dotbot-brew.git
-[submodule "prezto"]
-	path = shell/zsh/prezto
-	url = git://github.com/sorin-ionescu/prezto.git
+    path = .dotbot/plugins/dotbot-brew
+    url = git://github.com/d12frosted/dotbot-brew.git
 [submodule ".dotbot/plugins/dotbot-ghq"]
-	path = .dotbot/plugins/dotbot-ghq
-	url = git://github.com/klane/dotbot-ghq.git
+    path = .dotbot/plugins/dotbot-ghq
+    url = git://github.com/klane/dotbot-ghq.git
 [submodule ".dotbot/plugins/dotbot-pip"]
-	path = .dotbot/plugins/dotbot-pip
-	url = git://github.com/sobolevn/dotbot-pip.git
+    path = .dotbot/plugins/dotbot-pip
+    url = git://github.com/sobolevn/dotbot-pip.git
+[submodule "prezto"]
+    path = shells/zsh/prezto
+    url = git://github.com/sorin-ionescu/prezto.git
